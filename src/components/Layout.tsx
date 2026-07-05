@@ -69,9 +69,14 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <footer className="site-footer">
         <p>{t("footer.builtWith")}</p>
-        <Link to="/about" className="footer-link">
-          {t("nav.about")}
-        </Link>
+        <span className="footer-links">
+          <Link to="/review" className="footer-link">
+            {t("nav.review")}
+          </Link>
+          <Link to="/about" className="footer-link">
+            {t("nav.about")}
+          </Link>
+        </span>
       </footer>
 
       <nav className="bottom-nav" aria-label="Primary">

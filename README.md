@@ -122,19 +122,38 @@ src/
   types.ts          shared domain types
 ```
 
-## Contributing translations
+## Contributing translations & native-speaker review
 
-English is the source of truth. Bemba (`bem`), Nyanja (`nya`) and Tonga (`toi`)
-translations are **community-reviewable** and improving — any missing string
-falls back to English automatically at runtime.
+Because the whole point is a platform *shaped by* Zambian youth, **native-speaker
+review of the translations is the single most valuable contribution.** English is
+the source of truth; Bemba (`bem`), Nyanja (`nya`) and Tonga (`toi`) start as
+community drafts and any missing string falls back to English automatically.
+
+### In-app review tool (no coding needed)
+
+There is a built-in **"Help translate"** hub (footer → *Help translate*, or the
+`/review` route, also linked from the About page). It lets any native speaker:
+
+- pick a language and see a live **coverage bar** (how much is translated);
+- filter to strings that are **missing** or are only **community drafts needing review**;
+- read the English source and current translation side-by-side and **propose a better wording**;
+- have suggestions **saved on their own device** (offline, private — nothing is uploaded);
+- **export all suggestions as JSON** to paste into a GitHub issue or send to maintainers.
+
+The list is generated automatically from the app's content, so new lessons and
+strings show up for review with no extra setup.
+
+### Applying reviewed translations in code
+
+Maintainers fold exported suggestions back into the source:
 
 - UI strings live in `src/i18n/strings.ts`.
 - Learning content lives in `src/data/*.ts` as `Localized` objects
   (`{ en: "…", bem: "…", nya: "…", toi: "…" }`).
 
-If you speak one of these languages, corrections and additions are very welcome.
-Because the whole point is a platform *shaped by* Zambian youth, native-speaker
-review of the translations is the single most valuable contribution.
+Each exported suggestion includes the string `id` (e.g. `course/ai-basics/title`
+or `ui/home.hero.title`) and the English source to make it easy to locate and
+update the right value.
 
 > **Note on the Connect directory:** entries describe **real categories** of
 > affordable access that exist in Zambia and are intended as templates. Specific

@@ -70,6 +70,35 @@ export type UIKey =
   | "progress.reset"
   | "progress.resetConfirm"
   | "about.title"
+  | "nav.review"
+  | "review.title"
+  | "review.subtitle"
+  | "review.intro"
+  | "review.pickLang"
+  | "review.coverage"
+  | "review.translated"
+  | "review.missing"
+  | "review.reviewed"
+  | "review.filterMissing"
+  | "review.filterAll"
+  | "review.filterMine"
+  | "review.source"
+  | "review.current"
+  | "review.notTranslated"
+  | "review.yourSuggestion"
+  | "review.suggestionPlaceholder"
+  | "review.saved"
+  | "review.export"
+  | "review.exportHint"
+  | "review.copy"
+  | "review.copied"
+  | "review.clear"
+  | "review.clearConfirm"
+  | "review.search"
+  | "review.noResults"
+  | "review.thanks"
+  | "review.enOnly"
+  | "review.cta"
   | "settings.language"
   | "settings.dataSaver"
   | "settings.dataSaverHint"
@@ -150,6 +179,36 @@ const en: Dict = {
   "progress.reset": "Reset progress",
   "progress.resetConfirm": "Reset all your progress on this phone?",
   "about.title": "About",
+  "nav.review": "Help translate",
+  "review.title": "Help improve translations",
+  "review.subtitle": "This platform is meant to be shaped by young Zambians. If you speak Bemba, Nyanja or Tonga, your review makes it better for everyone.",
+  "review.intro":
+    "English is the source. Other languages start as community drafts that need native-speaker review. Pick a language, fix or add translations, then export your suggestions to share with the maintainers.",
+  "review.pickLang": "Language to review",
+  "review.coverage": "Coverage",
+  "review.translated": "translated",
+  "review.missing": "Missing translation",
+  "review.reviewed": "Community draft — needs review",
+  "review.filterMissing": "Needs translation",
+  "review.filterAll": "All",
+  "review.filterMine": "My suggestions",
+  "review.source": "English (source)",
+  "review.current": "Current",
+  "review.notTranslated": "Not yet translated — shows English",
+  "review.yourSuggestion": "Your suggestion",
+  "review.suggestionPlaceholder": "Type a better translation…",
+  "review.saved": "Saved on this phone",
+  "review.export": "Export my suggestions",
+  "review.exportHint": "Copy this and send it to the project maintainers (e.g. paste into a GitHub issue or message).",
+  "review.copy": "Copy",
+  "review.copied": "Copied!",
+  "review.clear": "Clear my suggestions",
+  "review.clearConfirm": "Delete all your saved suggestions for this language?",
+  "review.search": "Search text…",
+  "review.noResults": "Nothing matches your filter.",
+  "review.thanks": "Thank you — every correction helps a young person learn in their own language.",
+  "review.enOnly": "English is the source language, so there is nothing to review here. Pick Bemba, Nyanja or Tonga.",
+  "review.cta": "Help translate",
   "settings.language": "Language",
   "settings.dataSaver": "Data saver",
   "settings.dataSaverHint": "Hide images and heavy elements",
@@ -228,6 +287,9 @@ const bem: Partial<Dict> = {
   "progress.reset": "Fumyapo fyonse",
   "progress.resetConfirm": "Fumyapo fyonse ifyo waendako pa foni iyi?",
   "about.title": "Pali ifi",
+  "nav.review": "Afwako ukupilibula",
+  "review.cta": "Afwako ukupilibula",
+  "review.title": "Afwako ukuwamya ukupilibula",
   "settings.language": "Ululimi",
   "settings.dataSaver": "Ukusunga data",
   "settings.dataSaverHint": "Fisa ifikope ne fintu ifyafina",
@@ -306,6 +368,9 @@ const nya: Partial<Dict> = {
   "progress.reset": "Chotsani zonse",
   "progress.resetConfirm": "Chotsani zonse zomwe mwachita pa foni iyi?",
   "about.title": "Za ife",
+  "nav.review": "Thandizani kumasulira",
+  "review.cta": "Thandizani kumasulira",
+  "review.title": "Thandizani kukonza kumasulira",
   "settings.language": "Chinenero",
   "settings.dataSaver": "Kusunga data",
   "settings.dataSaverHint": "Bisani zithunzi ndi zinthu zolemera",
@@ -384,6 +449,9 @@ const toi: Partial<Dict> = {
   "progress.reset": "Gwisya zyoonse",
   "progress.resetConfirm": "Gwisya zyoonse nzwakacita afoni eeyi?",
   "about.title": "Atwiini",
+  "nav.review": "Gwasya kusandulula",
+  "review.cta": "Gwasya kusandulula",
+  "review.title": "Gwasya kubotya kusandulula",
   "settings.language": "Mwaambo",
   "settings.dataSaver": "Kuyobola data",
   "settings.dataSaverHint": "Sisa zifwanikiso azintu zilemu",

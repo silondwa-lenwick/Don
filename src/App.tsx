@@ -8,6 +8,7 @@ import Coach from "./pages/Coach";
 import Connect from "./pages/Connect";
 import Progress from "./pages/Progress";
 import About from "./pages/About";
+import Review from "./pages/Review";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/connect" element={<Connect />} />
         <Route path="/progress" element={<Progress />} />
         <Route path="/about" element={<About />} />
+        <Route path="/review" element={<Review />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Layout>

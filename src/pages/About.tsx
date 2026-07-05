@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useApp } from "../state/AppContext";
 import Icon from "../components/Icon";
 
@@ -75,9 +76,24 @@ export default function About() {
         </p>
         <p className="muted small">
           Translations for Bemba, Nyanja and Tonga are community-reviewable and
-          improving. If you speak these languages, your contributions are
-          welcome — see the project README.
+          improving. If you speak these languages, your review makes the platform
+          better for everyone.
         </p>
+      </section>
+
+      <section className="review-callout">
+        <div className="review-callout-body">
+          <div className="value-icon">
+            <Icon name="people" size={22} />
+          </div>
+          <div>
+            <strong>{t("review.title")}</strong>
+            <p className="muted">{t("review.subtitle")}</p>
+          </div>
+        </div>
+        <Link to="/review" className="btn primary block">
+          <Icon name="globe" size={18} /> {t("review.cta")}
+        </Link>
       </section>
     </div>
   );

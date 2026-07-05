@@ -129,13 +129,35 @@ repository name, so the app is served correctly under the project subpath
    to GitHub Pages → Run workflow**).
 4. The live URL appears in the workflow's `deploy` job and under Settings → Pages.
 
-### Deploying elsewhere
+### Vercel (config included)
+
+A `vercel.json` is included and preconfigured for this Vite app (build command,
+`dist` output, SPA fallback and asset caching). Vercel serves at the domain root,
+so the default base path (`/`) is correct — no extra environment variables needed.
+
+**Deploy via the dashboard:**
+
+1. Go to [vercel.com/new](https://vercel.com/new) and **Import** this Git repository.
+2. Vercel auto-detects the Vite framework and reads `vercel.json`. Keep the
+   defaults (Build Command `npm run build`, Output Directory `dist`).
+3. Click **Deploy**. Every push to the repo then triggers a new deployment, with
+   preview URLs for pull requests.
+
+**Or deploy from the CLI:**
+
+```bash
+npm i -g vercel
+vercel          # first run links/creates the project and deploys a preview
+vercel --prod   # promote to production
+```
+
+### Deploying to other static hosts
 
 The base path is configurable through the `BASE_PATH` environment variable
 (defaults to `/`):
 
 ```bash
-# Root of a domain (Netlify, Vercel, custom domain):
+# Root of a domain (Netlify, Cloudflare Pages, custom domain):
 npm run build
 
 # Under a subpath, e.g. https://example.com/chipego/ :

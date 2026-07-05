@@ -2,6 +2,8 @@
 
 **AI skills for every young Zambian.**
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsilondwa-lenwick%2FDon&project-name=chipego-ai&repository-name=chipego-ai)
+
 *Chipego* means "a gift / a talent" in several Zambian languages. Chipego AI is an
 offline-first, multilingual Progressive Web App (PWA) that expands access to AI
 tools, infrastructure and skills for **marginalized, under-resourced and excluded
@@ -134,6 +136,13 @@ repository name, so the app is served correctly under the project subpath
 A `vercel.json` is included and preconfigured for this Vite app (build command,
 `dist` output, SPA fallback and asset caching). Vercel serves at the domain root,
 so the default base path (`/`) is correct — no extra environment variables needed.
+
+**One-click deploy:**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsilondwa-lenwick%2FDon&project-name=chipego-ai&repository-name=chipego-ai)
+
+The button clones the repo to your own GitHub account and deploys it. After that,
+pushes to the repo trigger new deployments and each pull request gets a preview URL.
 
 **Deploy via the dashboard:**
 

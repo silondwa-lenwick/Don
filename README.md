@@ -5,11 +5,12 @@
 *Chipego* means "a gift / a talent" in several Zambian languages. Chipego AI is an
 offline-first, multilingual Progressive Web App (PWA) that expands access to AI
 tools, infrastructure and skills for **marginalized, under-resourced and excluded
-young people in Zambia** — so that AI becomes a tool for *empowerment and poverty
-reduction*, not exclusion.
+young people in Zambia aged 18–24** — so that AI becomes a tool for *empowerment
+and poverty reduction*, not exclusion.
 
 This project is an **AI for Good** submission for **Track 1 — Expanding access to
-AI tools, infrastructure and skills for underserved young people.**
+AI tools, infrastructure and skills for underserved young people.** The primary
+audience is youth **aged 18–24**.
 
 ---
 
@@ -106,6 +107,42 @@ python3 scripts/generate_icons.py   # requires Pillow
 2. Choose **Add to Home screen / Install app**.
 3. Open it once while online to cache everything.
 4. From then on it works fully offline — ideal when data runs out.
+
+## Deployment
+
+The app builds to a static `dist/` folder, so it can be hosted on any static
+host (GitHub Pages, Netlify, Vercel, Cloudflare Pages, etc.). Routing uses
+`HashRouter`, so deep links work with no server-side rewrite rules.
+
+### GitHub Pages (automated — included)
+
+A workflow at `.github/workflows/deploy.yml` builds and publishes to GitHub Pages
+on every push to `main`. It sets the correct base path automatically from the
+repository name, so the app is served correctly under the project subpath
+(`https://<user>.github.io/<repo>/`).
+
+**One-time setup (in the GitHub UI):**
+
+1. Go to **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. Push to `main` (or run the workflow manually via **Actions → Deploy Chipego AI
+   to GitHub Pages → Run workflow**).
+4. The live URL appears in the workflow's `deploy` job and under Settings → Pages.
+
+### Deploying elsewhere
+
+The base path is configurable through the `BASE_PATH` environment variable
+(defaults to `/`):
+
+```bash
+# Root of a domain (Netlify, Vercel, custom domain):
+npm run build
+
+# Under a subpath, e.g. https://example.com/chipego/ :
+BASE_PATH=/chipego/ npm run build
+```
+
+Then serve the generated `dist/` directory.
 
 ## Project structure
 

@@ -37,7 +37,12 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="app-shell">
       <header className="topbar">
         <Link to="/" className="brand" aria-label={t("app.name")}>
-          <img src="/favicon.svg" alt="" width={30} height={30} />
+          <img
+            src={`${import.meta.env.BASE_URL}favicon.svg`}
+            alt=""
+            width={30}
+            height={30}
+          />
           <span className="brand-text">
             <strong>{t("app.name")}</strong>
             <em>{t("app.tagline")}</em>

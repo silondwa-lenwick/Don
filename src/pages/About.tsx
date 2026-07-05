@@ -22,8 +22,8 @@ const VALUES = [
   },
   {
     icon: "people",
-    title: "For and shaped by youth",
-    body: "Aimed at marginalized, under-resourced and excluded young people, so no one is pushed further into poverty or invisibility.",
+    title: "For and shaped by youth (18–24)",
+    body: "Built for marginalized, under-resourced and excluded young people aged 18–24, so no one is pushed further into poverty or invisibility.",
   },
   {
     icon: "shield",
@@ -47,7 +47,12 @@ export default function About() {
 
       <section className="mission about-mission">
         <div className="course-icon big lvl-foundation">
-          <img src="/favicon.svg" alt="" width={34} height={34} />
+          <img
+            src={`${import.meta.env.BASE_URL}favicon.svg`}
+            alt=""
+            width={34}
+            height={34}
+          />
         </div>
         <h2>{t("app.name")}</h2>
         <p>{t("home.mission.body")}</p>
@@ -70,8 +75,8 @@ export default function About() {
         <h2 className="section-title">Track 1 — Access to AI tools, infrastructure & skills</h2>
         <p className="muted">
           Chipego AI focuses on expanding access to AI tools, infrastructure and
-          skills for underserved young people — through affordability, offline
-          access, AI literacy, practical skills, local-language design,
+          skills for underserved young people aged 18–24 — through affordability,
+          offline access, AI literacy, practical skills, local-language design,
           inclusion, education and digital equity.
         </p>
         <p className="muted small">
